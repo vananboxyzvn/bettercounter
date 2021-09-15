@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/listSpacing"
+    android:background="@color/colorPrimary"
+    android:orientation="horizontal">
+
+    <ImageButton
+        android:id="@+id/undoButton"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="match_parent"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_gravity="center"
+        android:tint="@drawable/button_state_color"
+        android:src="@drawable/ic_undo"
+        android:contentDescription="@string/decrease" />
+
+    <View style="@style/Divider.Vertical"/>
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/nameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textStyle="bold"
+            android:tint="#FFFFFF"
+            tools:text="Potentially long thing" />
+
+        <TextView
+            android:id="@+id/countText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dip"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textSize="24sp"
+            tools:text="0" />
+
+        <com.luteapp.bettercounter.ui.BetterRelativeTimeTextView
+            android:id="@+id/timestampText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:drawableStart="@drawable/ic_time"
+            android:drawableTint="@color/colorAccent"
+            android:drawablePadding="4.5dip"
+            tools:text="yesterday" />
+
+    </LinearLayout>
+
+    <View style="@style/Divider.Vertical"/>
+
+    <ImageButton
+        android:id="@+id/increaseButton"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="@dimen/buttonWidth"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_plusone"
+        android:tint="@drawable/button_state_color"
+        android:contentDescription="@string/increase" />
+
+</LinearLayout>
